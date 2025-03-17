@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayyedaaman2/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sayyedaaman2/portfolio/issues"
+  },
+  "homepage": "https://github.com/sayyedaaman2/portfolio#readme",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
