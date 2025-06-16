@@ -1,0 +1,62 @@
+import type { Metadata } from "next";
+import { NextFont } from "next/dist/compiled/@next/font";
+
+import { Poppins } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "@/context/theme-provider";
+import Header from "@/components/Header/Header";
+import ThemeScript from "@/script/ThemeScript";
+import InstallPWA from "@/components/InstallPWA";
+export const metadata: Metadata = {
+  title: "Sayyed Aaman",
+  description: "PORTFOLIO",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg", sizes: "32x32" },
+      { url: "/favicon.svg", type: "image/svg", sizes: "16x16" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "16x16" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#5bbad5"
+      }
+    ]
+  },
+  manifest: "/manifest.json"
+};
+
+const poppinsFont: NextFont = Poppins({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={` ${poppinsFont.className} min-h-screen`}>
+        <ThemeScript />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+        <InstallPWA/>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
