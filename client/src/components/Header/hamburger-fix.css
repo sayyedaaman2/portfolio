@@ -1,0 +1,32 @@
+/* Fix hamburger conflicts with Tailwind */
+.hamburger {
+  display: inline-block;
+  padding: 15px !important;
+  background: transparent !important;
+  border: 0 !important;
+  margin: 0 !important;
+  
+}
+
+.hamburger-box {
+  width: 40px !important;
+  height: 24px !important;
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  background-color: currentColor !important;
+  width: 40px !important;
+  height: 4px !important;
+  border-radius: 4px !important;
+}
+
+/* Dark mode support */
+.dark .hamburger-inner,
+.dark .hamburger-inner::before,
+.dark .hamburger-inner::after {
+  background-color: currentColor !important;
+}

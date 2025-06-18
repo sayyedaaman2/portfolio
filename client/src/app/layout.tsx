@@ -12,24 +12,25 @@ export const metadata: Metadata = {
   description: "PORTFOLIO",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
+      {
+        url: "/favicon.svg",
+      },
+      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
       { url: "/favicon.svg", type: "image/svg", sizes: "32x32" },
-      { url: "/favicon.svg", type: "image/svg", sizes: "16x16" },
-      { url: "/favicon-96x96.png", type: "image/png", sizes: "16x16" }
+      { url: "/favicon-16x16.svg", type: "image/svg", sizes: "16x16" },
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
     ],
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180" },
-    ],
+    shortcut: "/favicon.svg",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
     other: [
       {
         rel: "mask-icon",
         url: "/safari-pinned-tab.svg",
-        color: "#5bbad5"
-      }
-    ]
+        color: "#5bbad5",
+      },
+    ],
   },
-  manifest: "/manifest.json"
+  manifest: "/manifest.json",
 };
 
 const poppinsFont: NextFont = Poppins({
@@ -54,7 +55,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-        <InstallPWA/>
+          <InstallPWA />
         </ThemeProvider>
       </body>
     </html>
