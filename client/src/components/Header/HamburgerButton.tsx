@@ -19,7 +19,7 @@ export default function HamburgerButton({
   const [internalIsActive, setInternalIsActive] = useState(false);
   const isActive = controlledIsActive ?? internalIsActive;
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = () => {
     const newState = !isActive;
     
     // Update internal state if not controlled

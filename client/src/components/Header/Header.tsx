@@ -18,7 +18,7 @@ export default function Header() {
               transition-transform duration-300 ease-in-out
               ${
                 isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-              }            backdrop-blur-md bg-white/30 dark:bg-black/30   p-6 shadow-lg`}
+              }            backdrop-blur-md  bg-white/30 dark:bg-black/30   p-6 shadow-lg lg:shadow-none`}
           >
             <ul
               className={`
