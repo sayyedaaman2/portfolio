@@ -2,13 +2,16 @@
 @import 'hamburgers/dist/hamburgers.css';
 @custom-variant dark (&:where(.dark, .dark *));
 
+
+
 @layer components {
-.hamburger {
-    @apply hidden md:block lg:!hidden ;
+  .hamburger {
+    @apply hidden md:block lg:!hidden;
   }
 
 
   .nav-item {
-    @apply text-4xl  border border-slate-50 grid place-items-center py-6 lg:text-sm lg:border-0 lg:bg-transparent lg:py-0 ;
+    @apply border border-slate-50 grid place-items-center py-6 lg:border-0 lg:bg-transparent lg:py-0;
   }
+
 }
