@@ -10,8 +10,5 @@
   }
 
 
-  .nav-item {
-    @apply border border-slate-50 grid place-items-center py-6 lg:border-0 lg:bg-transparent lg:py-0;
-  }
 
 }

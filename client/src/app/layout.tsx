@@ -44,8 +44,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={` ${poppinsFont.className} min-h-screen`}>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <body className={` ${poppinsFont.className} relative min-h-screen`}>
         <ThemeScript />
         <ThemeProvider
           attribute="class"
@@ -54,7 +54,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="grid grid-cols-[minmax(1rem,2rem)_1fr_minmax(1rem,2rem)] lg:grid-cols-[minmax(1rem,5rem)_1fr_minmax(1rem,5rem)] [&>*:nth-child(1)]:col-start-2 ">
+          <div className="grid grid-cols-[minmax(10px,2rem)_1fr_minmax(10px,2rem)] lg:grid-cols-[minmax(1rem,5rem)_1fr_minmax(1rem,5rem)] [&>*:nth-child(1)]:col-start-2 ">
             {children}
           </div>
           <InstallPWA />
