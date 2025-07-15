@@ -1,8 +1,10 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { NextFont } from "next/dist/compiled/@next/font";
-
 import { Poppins } from "next/font/google";
-import "./globals.css";
+
+import {GoogleAnalytics} from '@next/third-parties/google'
+
 import { ThemeProvider } from "@/context/theme-provider";
 import Header from "@/components/Header/Header";
 import ThemeScript from "@/script/ThemeScript";
@@ -59,6 +61,7 @@ export default function RootLayout({
           </div>
           <InstallPWA />
         </ThemeProvider>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""}/>
       </body>
     </html>
   );

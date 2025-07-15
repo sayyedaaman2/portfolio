@@ -3,6 +3,7 @@ import Image from "next/image";
 
 
 export default function AboutSection() {
+    // This will show your GA ID in development and production
     return (
         <section id="about" className="  ">
             <div className=" container grid grid-cols-1  md:grid-cols-[30%_70%] md:grid-rows-1  border-4 border-slate-200 dark:border-slate-800 rounded-md overflow-hidden">
