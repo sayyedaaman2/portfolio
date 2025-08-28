@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={` ${poppinsFont.className} relative min-h-screen`}>
+      <body className={` ${poppinsFont.className} relative min-h-screen`} suppressHydrationWarning>
         <ThemeScript />
         <ThemeProvider
           attribute="class"
