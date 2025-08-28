@@ -30,6 +30,10 @@ const Navigation:MenuLinkType[] = [
     href : '#skills',
 
   },
+  {
+    title : 'Contact',
+    href : '#contact'
+  }
  
 ]
 export default function Header() {
