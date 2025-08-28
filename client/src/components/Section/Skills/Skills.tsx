@@ -93,12 +93,12 @@ const SkillIconList: SkillIcon[] = [
 
 export default function Skills(){
     return(
-        <div id="skills">
+        <section id="skills">
             <div className="container">
                 <h1 className="text-2xl uppercase font-black tracking-[1em] text-center my-8">Skills</h1>
                   <SkillLayout  List={SkillIconList}/>
             </div>
-        </div>
+        </section>
     )
 }
 interface SkillLayoutProps {
