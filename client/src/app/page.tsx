@@ -6,8 +6,7 @@ import Skills from "@/components/Section/Skills/Skills";
 
 export default function Home() {
 
-  return <main className="grid grid-cols-1 gap-24 md:gap-32 lg:gap-42 my-24 lg:my-42 ">
-
+  return <main className="grid grid-cols-1 [&>*]:min-h-screen [&>*]:pt-16">
     <HeroSection />
     <AboutSection />
     <Project/>

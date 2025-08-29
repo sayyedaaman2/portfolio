@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/context/theme-provider";
 import Header from "@/components/Header/Header";
 import ThemeScript from "@/script/ThemeScript";
 import InstallPWA from "@/components/InstallPWA";
+import Footer from "@/components/Footer/Footer";
 export const metadata: Metadata = {
   title: "Sayyed Aaman",
   description: "PORTFOLIO",
@@ -46,8 +47,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={` ${poppinsFont.className} relative min-h-screen`} suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth scrollbar-hide" suppressHydrationWarning>
+      <body className={` ${poppinsFont.className} relative min-h-screen grid grid-rows-[1fr_10vh] `} suppressHydrationWarning>
         <ThemeScript />
         <ThemeProvider
           attribute="class"
@@ -56,9 +57,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="grid grid-cols-[minmax(10px,2rem)_1fr_minmax(10px,2rem)] lg:grid-cols-[minmax(1rem,5rem)_1fr_minmax(1rem,5rem)] [&>*:nth-child(1)]:col-start-2 ">
+          <div className="row-start-1 row-end-2 grid grid-cols-[minmax(10px,2rem)_1fr_minmax(10px,2rem)] lg:grid-cols-[minmax(1rem,5rem)_1fr_minmax(1rem,5rem)] [&>*:nth-child(1)]:col-start-2 ">
             {children}
           </div>
+          <Footer className="row-start-2 row-end-3"/>
           <InstallPWA />
         </ThemeProvider>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""}/>
