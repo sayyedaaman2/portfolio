@@ -50,14 +50,14 @@ export default function InstallPWA() {
     <div className="fixed bottom-4 right-4 bg-green-400 text-white p-4 rounded-lg shadow-lg z-50">
       <button 
         onClick={handleInstall} 
-        className="font-medium"
+        className="text-md font-medium"
         aria-label="Install application"
       >
         Install App
       </button>
       <button 
         onClick={() => setIsVisible(false)} 
-        className="ml-4 text-sm"
+        className="ml-4 text-xs"
         aria-label="Close installation prompt"
       >
         Close
