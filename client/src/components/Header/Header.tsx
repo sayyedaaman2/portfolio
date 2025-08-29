@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 import Logo from "./Logo";
 import ThemeButton from "./ThemeButton";
 import HamburgerButton from "./HamburgerButton";
@@ -36,11 +37,16 @@ const Navigation:MenuLinkType[] = [
   }
  
 ]
-export default function Header() {
+
+interface HeaderProps extends ComponentPropsWithoutRef<"header"> {
+    isSticky?: boolean;
+}
+
+export default function Header({className,...rest}:HeaderProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="fixed w-full h-[10vh] z-[100]  backdrop-blur-md bg-white dark:bg-black   ">
+    <header className={`fixed w-full h-[10vh] z-[100]  backdrop-blur-md bg-white dark:bg-black ${className}`} {...rest}>
       <div className="px-4 lg:px-20 h-full flex justify-between items-center">
         <Logo />
         <div className="flex items-center lg:gap-5">
@@ -58,7 +64,7 @@ export default function Header() {
               {
                 Navigation.map(({title,href},index)=>(
                   
-                  <li key={index} className=" button uppercase border border-slate-50 grid place-items-center py-6 lg:border-0 lg:bg-transparent lg:py-0"><Link href={href}>{title}</Link></li>
+                  <li key={index} className=" button uppercase border border-slate-50 grid place-items-center py-6 lg:border-0 lg:bg-transparent lg:py-0"><Link href={href} onClick={()=> setIsOpen(false)}>{title}</Link></li>
                 ))
               }
               
