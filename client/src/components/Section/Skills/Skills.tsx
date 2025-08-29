@@ -1,3 +1,4 @@
+import SectionTitle from '@/components/common/SectionTitle';
 import 'devicon'
 
 type SkillIcon ={
@@ -93,9 +94,9 @@ const SkillIconList: SkillIcon[] = [
 
 export default function Skills(){
     return(
-        <section id="skills">
+        <section id="skills" >
             <div className="container">
-                <h1 className="text-2xl uppercase font-black tracking-[1em] text-center my-8">Skills</h1>
+                <SectionTitle title={"skills"}/>
                   <SkillLayout  List={SkillIconList}/>
             </div>
         </section>

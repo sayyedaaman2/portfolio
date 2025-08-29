@@ -1,10 +1,11 @@
 import CardList from "@/components/Card/CardList";
+import SectionTitle from "@/components/common/SectionTitle";
 
 export default function Project(){
     return(
-        <section id="project">
+        <section id="project" >
             <div className="container  grid ">
-                <h1 className="text-2xl uppercase font-black tracking-[1em] text-center my-8">Project</h1>
+                <SectionTitle title={"project"}/>
               <CardList/>
             </div>
         </section>
