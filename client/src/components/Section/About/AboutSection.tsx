@@ -9,8 +9,8 @@ export default function AboutSection() {
         <section id="about">
             <div className="container grid items-center">
                     <SectionTitle title={"about"}/>
-                <div className="about_me grid lg:grid-cols-2 items-center w-full lg:gap-24 border rounded-2xl overflow-hidden">
-                    <div className="img_section relative aspect-square ">
+                <div className="about_me grid lg:grid-cols-2 items-center w-full lg:gap-14 border rounded-2xl overflow-hidden">
+                    <div className="img_section relative aspect-video">
                         <Image src={'/myimage.jpg'} alt="Aaman Sayyed's Photo" fill={true} loading="lazy" className="object-cover" ></Image>
                     </div>
                     <div className="about_section flex flex-col justify-around p-4">
