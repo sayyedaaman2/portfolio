@@ -55,5 +55,46 @@
             "CSS3",
             "JavaScript"
         ]
+    },
+    {
+        "title": "Expense Tracker CLI",
+        "description": "A simple command-line application built with Node.js and TypeScript to track expenses. Supports adding, updating, deleting, and viewing monthly summaries.",
+        "imageUrl": "",
+        "githubUrl": "https://github.com/sayyedaaman2/expense-tracker-cli",
+        "projectUrl": "",
+        "category": "backend",
+        "techStack": [
+            "Node.js",
+            "TypeScript",
+            "CLI"
+        ]
+    },
+    {
+        "title": "GitHub User Activity CLI",
+        "description": "A simple Node.js CLI tool to fetch and display a GitHub user's recent public activity, including commits, issues, stars, and forks using the GitHub API.",
+        "imageUrl": "",
+        "githubUrl": "https://github.com/sayyedaaman2/user-activity-cli",
+        "projectUrl": "",
+        "category": "backend",
+        "techStack": [
+            "Node.js",
+            "JavaScript",
+            "CLI",
+            "GitHub API"
+        ]
+    },
+    {
+        "title": "Notes App",
+        "description": "A simple Node.js application to create, read, update, and delete notes from the command line. Helps in organizing and managing personal notes efficiently.",
+        "imageUrl": "/project/notesapp.png",
+        "githubUrl": "https://github.com/sayyedaaman2/notes-app",
+        "projectUrl": "",
+        "category": "frontend",
+        "techStack": [
+            "Node.js",
+            "JavaScript",
+            "CLI",
+            "File System"
+        ]
     }
 ]
