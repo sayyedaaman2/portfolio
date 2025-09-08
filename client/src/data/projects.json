@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Notification Service",
+        "description": "A Node.js service for sending email notifications using Nodemailer with reusable modules, error handling, and configuration management.",
+        "imageUrl": "",
+        "githubUrl": "https://github.com/sayyedaaman2/notificationService",
+        "projectUrl": "",
+        "category": "backend",
+        "techStack": [
+            "Node.js",
+            "Nodemailer",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Movie Booking App",
+        "description": "A backend system for booking movies, built with Node.js, Express.js, and MongoDB. Features include authentication, movie listings, and ticket booking APIs.",
+        "imageUrl": "",
+        "githubUrl": "https://github.com/sayyedaaman2/Movie_Booking_App",
+        "projectUrl": "",
+        "category": "backend",
+        "techStack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Mongoose",
+            "REST API"
+        ]
+    },
+    {
+        "title": "Calculator",
+        "description": "A basic calculator built with HTML, CSS, and JavaScript, supporting core arithmetic operations with a clean responsive UI.",
+        "imageUrl": "/project/calculator.png",
+        "githubUrl": "https://github.com/sayyedaaman2/calculator",
+        "projectUrl": "https://sayyedaaman2.github.io/calculator/",
+        "category": "frontend",
+        "techStack": [
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ]
+    },
+    {
+        "title": "Simple Chat App",
+        "description": "A real-time chat application built with Node.js, Express, and Socket.IO. Users can join with a unique username and exchange messages instantly.",
+        "imageUrl": "/project/simplechatapp.png",
+        "githubUrl": "https://github.com/sayyedaaman2/SimpleChatApp",
+        "projectUrl": "",
+        "category": "frontend",
+        "techStack": [
+            "Node.js",
+            "Express.js",
+            "Socket.IO",
+            "HTML5",
+            "CSS3",
+            "JavaScript"
+        ]
+    }
+]
