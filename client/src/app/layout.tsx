@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Poppins } from "next/font/google";
 
-import {GoogleAnalytics} from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { ThemeProvider } from "@/context/theme-provider";
 import Header from "@/components/Header/Header";
@@ -11,8 +11,41 @@ import ThemeScript from "@/script/ThemeScript";
 import InstallPWA from "@/components/InstallPWA";
 import Footer from "@/components/Footer/Footer";
 export const metadata: Metadata = {
-  title: "Sayyed Aaman",
-  description: "PORTFOLIO",
+  title: "Sayyed Aaman | Full-Stack Developer",
+  description:
+    "Portfolio of Sayyed Aaman – Full-Stack Developer skilled in React, Next.js, Node.js, and Dockerized apps.",
+  keywords: [
+    "Sayyed Aaman",
+    "Full-Stack Developer",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Portfolio"
+  ],
+  authors: [{ name: "Sayyed Aaman", url: "https://sayyedaaman.vercel.app" }],
+  openGraph: {
+    title: "Sayyed Aaman | Full-Stack Developer",
+    description: "Explore my projects in React, Node.js, and full-stack development.",
+    url: "https://sayyedaaman.vercel.app",
+    siteName: "Sayyed Aaman Portfolio",
+    images: [
+      {
+        url: "/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Sayyed Aaman Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sayyed Aaman | Full-Stack Developer",
+    description: "Portfolio showcasing projects in React, Node.js, and more.",
+    creator: "@sayyedaaman",
+    images: ["/preview.png"],
+  },
   icons: {
     icon: [
       {
@@ -60,10 +93,10 @@ export default function RootLayout({
           <div className="row-start-1 row-end-2 grid grid-cols-[minmax(10px,2rem)_1fr_minmax(10px,2rem)] lg:grid-cols-[minmax(1rem,5rem)_1fr_minmax(1rem,5rem)] [&>*:nth-child(1)]:col-start-2 ">
             {children}
           </div>
-          <Footer className="row-start-2 row-end-3"/>
+          <Footer className="row-start-2 row-end-3" />
           <InstallPWA />
         </ThemeProvider>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""}/>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
       </body>
     </html>
   );

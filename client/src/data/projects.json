@@ -1,5 +1,23 @@
 [
     {
+        "title": "Task Tracker App",
+        "description": "A full-stack task management application with a Node.js + Express backend and a React (Vite) frontend, following MVC and MVVM architecture patterns. Supports task CRUD operations with MongoDB integration and Dockerized deployment.",
+        "imageUrl": "/project/task-tracker.png",
+        "githubUrl": "https://github.com/sayyedaaman2/task-tracker-app",
+        "projectUrl": "",
+        "category": "fullstack",
+        "techStack": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Mongoose",
+            "React",
+            "Vite",
+            "Docker",
+            "JavaScript"
+        ]
+    },
+    {
         "title": "Notification Service",
         "description": "A Node.js service for sending email notifications using Nodemailer with reusable modules, error handling, and configuration management.",
         "imageUrl": "",
