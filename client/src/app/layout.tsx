@@ -66,6 +66,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+  other: {
+    "google-site-verification": "6ZjEdYcK3X4BCuzBVWSHJBvtFWnXUtqMctAHxToOF-w",
+  },
   manifest: "/manifest.json",
 };
 
