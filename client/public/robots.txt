@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sayyedaaman.vercel.app
+
+# Sitemaps
+Sitemap: https://sayyedaaman.vercel.app/sitemap.xml
