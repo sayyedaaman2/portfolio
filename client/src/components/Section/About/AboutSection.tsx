@@ -1,29 +1,69 @@
-import SectionTitle from "@/components/common/SectionTitle";
-import SocialLinks from "@/components/Social/SocialLinks";
 import Image from "next/image";
 
+import SectionTitle from "@/components/common/SectionTitle";
+import SocialLinks from "@/components/Social/SocialLinks";
 
 export default function AboutSection() {
-    // This will show your GA ID in development and production
-    return (
-        <section id="about">
-            <div className="container grid items-center">
-                    <SectionTitle title={"about"}/>
-                <div className="about_me grid lg:grid-cols-2 items-center w-full lg:gap-14 border rounded-2xl overflow-hidden">
-                    <div className="img_section relative aspect-video">
-                        <Image src={'/myimage.jpg'} alt="Aaman Sayyed's Photo" fill={true} loading="lazy" className="object-cover" ></Image>
-                    </div>
-                    <div className="about_section flex flex-col justify-around p-4">
-                        <h1 className="text-xl font-black mb-2">Aaman Sayyed</h1>
-                        <p className="text-sm leading-relaxed mb-4">
-                            I&apos;m a passionate Full-Stack Web Developer with 6 months of hands-on experience — including 2 months of internship and 4 months in a professional role. I specialize in building dynamic, user-friendly web applications using technologies like React, Next.js, Node.js, and MongoDB. I love solving real-world problems through code and continuously learning new tools and best practices to sharpen my skills. When I&apos;m not coding, I enjoy exploring new tech trends, traveling, and leveling up my design sense.
-                        </p>
-                        <SocialLinks />
-                    </div>
-                </div>
+  return (
+    <section
+      id="about"
+      className="py-24 lg:py-32"
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <SectionTitle title="ABOUT" />
 
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mt-16">
+          {/* Image */}
+          <div className="relative">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] border border-white/10 bg-[#111827]">
+              <Image
+                src="/myimage.jpg"
+                alt="Aaman Sayyed"
+                fill
+                priority
+                className="object-cover grayscale hover:grayscale-0 transition duration-500"
+              />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div>
+            <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-4 py-2 mb-8 text-sm text-[#9CA3AF]">
+              <div className="w-2 h-2 rounded-full bg-[#10B981]" />
+              Backend-focused engineer
             </div>
 
-        </section>
-    );
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-white">
+              Designing scalable backend systems with production-focused thinking.
+            </h2>
+
+            <div className="space-y-6 text-[#9CA3AF] text-lg leading-relaxed">
+              <p>
+                I specialize in backend-focused full stack development using
+                Node.js, Express.js, MongoDB, and Next.js to build modular APIs,
+                authentication systems, and scalable web applications.
+              </p>
+
+              <p>
+                My development approach prioritizes clean architecture,
+                maintainability, secure request handling, reusable services, and
+                production-ready engineering practices over trend-driven UI
+                complexity.
+              </p>
+
+              <p>
+                Currently focused on improving backend scalability, API
+                architecture, Docker workflows, authentication systems, and
+                performance optimization for modern web applications.
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <SocialLinks />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
