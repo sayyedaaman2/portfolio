@@ -1,10 +1,26 @@
-interface SectionTitleProp {
-    title : string,
+interface SectionTitleProps {
+  title: string;
+  align?: "left" | "center";
 }
 
-export default function SectionTitle({title="Title"}:SectionTitleProp){
-    return(
-        <h1 className="text-xl lg:text-2xl uppercase font-black tracking-[0.5em] lg:tracking-[1em] text-center my-8">{title}</h1>
-
-    )
+export default function SectionTitle({
+  title,
+  align = "left",
+}: SectionTitleProps) {
+  return (
+    <div className="mb-8">
+      <p
+        className={`
+          text-sm
+          font-medium
+          uppercase
+          tracking-[0.3em]
+          text-[#06B6D4]
+          ${align === "center" ? "text-center" : "text-left"}
+        `}
+      >
+        {title}
+      </p>
+    </div>
+  );
 }
