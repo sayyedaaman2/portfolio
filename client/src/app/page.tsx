@@ -1,17 +1,27 @@
-import AboutSection from "@/components/Section/About/AboutSection";
-import Contact from "@/components/Section/Contact/Contact";
 import HeroSection from "@/components/Section/Hero/HeroSection";
-import Project from "@/components/Section/Project/Project";
-import Skills from "@/components/Section/Skills/Skills";
+import StackSection from "@/components/Section/Skills/Skills";
+import ProjectSection from "@/components/Section/Project/Project";
+import ArchitectureSection from "@/components/Section/Architecture/ArchitectureSection";
+import ExperienceSection from "@/components/Section/Experience/ExperienceSection";
+import AboutSection from "@/components/Section/About/AboutSection";
+import ContactSection from "@/components/Section/Contact/Contact";
 
 export default function Home() {
+  return (
+    <main className="bg-[#0B0F19] text-white overflow-hidden">
+      <HeroSection />
 
-  return <main className="grid grid-cols-1 [&>*]:min-h-screen [&>*]:pt-16">
-    <HeroSection />
-    <AboutSection />
-    <Project/>
-    <Skills/>
-    <Contact/>
+      <StackSection />
 
-  </main>;
+      <ProjectSection />
+
+      <ArchitectureSection />
+
+      <ExperienceSection />
+
+      <AboutSection />
+
+      <ContactSection />
+    </main>
+  );
 }

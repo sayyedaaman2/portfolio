@@ -1,131 +1,103 @@
-import SectionTitle from '@/components/common/SectionTitle';
-import 'devicon'
+import SectionTitle from "@/components/common/SectionTitle";
 
-type SkillIcon ={
-  title : string,
-  class? : string
-}
-const SkillIconList: SkillIcon[] = [
+const stackGroups = [
   {
-    title: "HTML",
-    class: "devicon-html5-plain text-orange-500",
+    title: "Backend Systems",
+    items: [
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "JWT Authentication",
+      "OAuth",
+      "WebSockets",
+    ],
   },
   {
-    title: "CSS",
-    class: "devicon-css3-plain text-blue-500",
+    title: "Databases",
+    items: [
+      "MongoDB",
+      "Mongoose",
+      "MySQL",
+      "MariaDB",
+    ],
   },
   {
-    title: "JavaScript",
-    class: "devicon-javascript-plain text-yellow-400",
+    title: "Frontend",
+    items: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
   },
   {
-    title: "TypeScript",
-    class: "devicon-typescript-plain text-blue-600",
-  },
-  {
-    title: "React.js",
-    class: "devicon-react-original text-cyan-400",
-  },
-  {
-    title: "Next.js",
-    class: "devicon-nextjs-plain text-black dark:text-white",
-  },
-  {
-    title: "Node.js",
-    class: "devicon-nodejs-plain text-green-600 ",
-  },
-  {
-    title: "TailwindCSS",
-    class: "devicon-tailwindcss-plain text-sky-500",
-  },
-  {
-    title: "MySQL",
-    class: "devicon-mysql-plain text-blue-500",
-  },
-  {
-    title: "MariaDB",
-    class: "devicon-mariadb-plain text-indigo-500",
-  },
-  {
-    title: "MongoDB",
-    class: "devicon-mongodb-plain text-green-700",
-  },
-  {
-    title: "Sequelize",
-    class: "devicon-sequelize-plain text-sky-700",
-  },
-  {
-    title: "Mongoose",
-    class: "devicon-mongodb-plain text-green-700", 
-  },
-  {
-    title: "OAuth",
-    class: "devicon-openapi-plain text-gray-600", 
-  },
-  {
-    title: "Passport.js",
-    class: "devicon-javascript-plain text-yellow-400", 
-  },
-  {
-    title: "NextAuth",
-    class: "devicon-nextjs-plain text-black dark:text-white", 
-  },
-  {
-    title: "NPM",
-    class: "devicon-npm-original-wordmark text-red-600",
-  },
-  {
-    title: "Git",
-    class: "devicon-git-plain text-orange-600",
-  },
-  {
-    title: "Postman",
-    class: "devicon-postman-plain text-orange-500",
-  },
-  {
-    title: "API",
-    class: "devicon-openapi-plain text-gray-600",
-  },
-  {
-    title: "DSA",
-    class: "devicon-cplusplus-plain text-blue-600", 
+    title: "Infrastructure & Tooling",
+    items: [
+      "Docker",
+      "Git",
+      "Postman",
+      "NPM",
+    ],
   },
 ];
 
-export default function Skills(){
-    return(
-        <section id="skills" >
-            <div className="container">
-                <SectionTitle title={"skills"}/>
-                  <SkillLayout  List={SkillIconList}/>
-            </div>
-        </section>
-    )
-}
-interface SkillLayoutProps {
-  List : SkillIcon[]
-}
-function SkillLayout({ List }: SkillLayoutProps) {
+export default function StackSection() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 ">
-      {List.map((icon:SkillIcon, index) => (
-        <div 
-          key={index} 
-          className="flex flex-col items-center justify-center space-y-2 p-4 rounded-xl shadow-sm hover:shadow-md dark:shadow-slate-300 transition"
-        >
-          <Icon {...icon} />
+    <section
+      id="stack"
+      className="py-24 lg:py-32"
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <SectionTitle title="STACK" />
+
+        <div className="max-w-3xl mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+            Technologies used to build scalable backend systems.
+          </h2>
+
+          <p className="text-lg text-[#9CA3AF] leading-relaxed">
+            Focused on backend architecture, authentication systems,
+            scalable APIs, database design, and production-focused
+            engineering workflows using modern JavaScript technologies.
+          </p>
         </div>
-      ))}
-    </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {stackGroups.map((group) => (
+            <div
+              key={group.title}
+              className="
+                rounded-[32px]
+                border border-white/10
+                bg-[#111827]
+                p-8
+              "
+            >
+              <h3 className="text-2xl font-semibold text-white mb-8">
+                {group.title}
+              </h3>
+
+              <div className="flex flex-wrap gap-3">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="
+                      rounded-full
+                      border border-white/10
+                      bg-white/5
+                      px-4 py-2
+                      text-sm
+                      text-[#9CA3AF]
+                    "
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
-}
-
-
-function Icon(props:SkillIcon){
-  
-  return(<>
-    <i className={`text-lg md:text-4xl lg:text-6xl font-meduim ${props?.class ? props.class : ""}`}></i>
-    <span className="text-sm font-medium">{props.title}</span>
-  </>
-  )
 }

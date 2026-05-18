@@ -1,81 +1,110 @@
 import "./globals.css";
+
 import type { Metadata } from "next";
-import { NextFont } from "next/dist/compiled/@next/font";
 import { Poppins } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
-import { GoogleAnalytics } from '@next/third-parties/google'
-
-import { ThemeProvider } from "@/context/theme-provider";
 import Header from "@/components/Header/Header";
-import ThemeScript from "@/script/ThemeScript";
-import InstallPWA from "@/components/InstallPWA";
 import Footer from "@/components/Footer/Footer";
+import InstallPWA from "@/components/InstallPWA";
+import ThemeScript from "@/script/ThemeScript";
+import { ThemeProvider } from "@/context/theme-provider";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
-  title: "Sayyed Aaman | Full-Stack Developer",
+  metadataBase: new URL("https://sayyedaaman.vercel.app"),
+
+  title: {
+    default: "Aaman Sayyed | Backend Engineer",
+    template: "%s | Aaman Sayyed",
+  },
+
   description:
-    "Portfolio of Sayyed Aaman – Full-Stack Developer skilled in React, Next.js, Node.js, and Dockerized apps.",
+    "Backend-focused full stack developer building scalable APIs, authentication systems, and production-ready Node.js applications.",
+
   keywords: [
-    "Sayyed Aaman",
-    "Full-Stack Developer",
-    "React",
+    "Aaman Sayyed",
+    "Backend Engineer",
+    "Node.js Developer",
     "Next.js",
-    "Node.js",
-    "Portfolio"
+    "MongoDB",
+    "Express.js",
+    "JWT Authentication",
+    "REST API",
+    "Docker",
+    "Full Stack Developer",
   ],
-  authors: [{ name: "Sayyed Aaman", url: "https://sayyedaaman.vercel.app" }],
+
+  authors: [
+    {
+      name: "Aaman Sayyed",
+      url: "https://sayyedaaman.vercel.app",
+    },
+  ],
+
+  creator: "Aaman Sayyed",
+
   openGraph: {
-    title: "Sayyed Aaman | Full-Stack Developer",
-    description: "Explore my projects in React, Node.js, and full-stack development.",
+    type: "website",
+    locale: "en_US",
     url: "https://sayyedaaman.vercel.app",
-    siteName: "Sayyed Aaman Portfolio",
+    siteName: "Aaman Sayyed Portfolio",
+
+    title: "Aaman Sayyed | Backend Engineer",
+
+    description:
+      "Explore scalable backend systems, authentication architecture, and production-focused full stack engineering projects.",
+
     images: [
       {
         url: "/preview.png",
         width: 1200,
         height: 630,
-        alt: "Sayyed Aaman Portfolio",
+        alt: "Aaman Sayyed Portfolio",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Sayyed Aaman | Full-Stack Developer",
-    description: "Portfolio showcasing projects in React, Node.js, and more.",
+    title: "Aaman Sayyed | Backend Engineer",
+
+    description:
+      "Backend-focused developer building scalable APIs and production-ready systems.",
+
     creator: "@sayyedaaman",
     images: ["/preview.png"],
   },
+
   icons: {
     icon: [
-      {
-        url: "/favicon.svg",
-      },
-      { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
-      { url: "/favicon.svg", type: "image/svg", sizes: "32x32" },
-      { url: "/favicon-16x16.svg", type: "image/svg", sizes: "16x16" },
-      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
     ],
-    shortcut: "/favicon.svg",
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-        color: "#5bbad5",
-      },
-    ],
-  },
-  other: {
-    "google-site-verification": "6ZjEdYcK3X4BCuzBVWSHJBvtFWnXUtqMctAHxToOF-w",
-  },
-  manifest: "/manifest.json",
-};
 
-const poppinsFont: NextFont = Poppins({
-  subsets: ["latin"],
-  weight: "400",
-});
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        sizes: "180x180",
+      },
+    ],
+
+    shortcut: "/favicon.svg",
+  },
+
+  manifest: "/manifest.json",
+
+  other: {
+    "google-site-verification":
+      "6ZjEdYcK3X4BCuzBVWSHJBvtFWnXUtqMctAHxToOF-w",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -83,9 +112,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth scrollbar-hide" suppressHydrationWarning>
-      <body className={` ${poppinsFont.className} relative min-h-screen grid grid-rows-[1fr_10vh] `} suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${poppins.variable} scroll-smooth`}
+    >
+      <body className="min-h-screen bg-[#0B0F19] text-white antialiased flex flex-col">
         <ThemeScript />
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -93,13 +127,19 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="row-start-1 row-end-2 grid grid-cols-[minmax(10px,2rem)_1fr_minmax(10px,2rem)] lg:grid-cols-[minmax(1rem,5rem)_1fr_minmax(1rem,5rem)] [&>*:nth-child(1)]:col-start-2 ">
+
+          <main className="flex-1">
             {children}
-          </div>
-          <Footer className="row-start-2 row-end-3" />
+          </main>
+
+          <Footer />
+
           <InstallPWA />
         </ThemeProvider>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
+
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );
