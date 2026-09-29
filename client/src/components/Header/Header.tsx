@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 h-[88px] border-b border-white/10 bg-[#0B0F19]/80 backdrop-blur-xl">
+      <header className="fixed top-0 left-0 right-0 z-50 h-[88px] border-b border-[var(--border)] bg-background/80 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto h-full px-6 lg:px-12 flex items-center justify-between">
           <Logo />
 
@@ -66,7 +66,7 @@ export default function Header() {
 
       <nav
         id="mobile-navigation"
-        className={`fixed top-[88px] left-0 right-0 z-40 border-b border-white/10 bg-[#111827] backdrop-blur-xl transition-all duration-300 lg:hidden ${
+        className={`fixed top-[88px] left-0 right-0 z-40 border-b border-[var(--border)] bg-surface backdrop-blur-xl transition-all duration-300 lg:hidden ${
           isOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4 pointer-events-none"

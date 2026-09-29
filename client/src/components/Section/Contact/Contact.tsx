@@ -17,11 +17,11 @@ export default function Contact() {
             Available for backend engineering opportunities
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8 text-white">
+          <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8 text-foreground">
             Let’s build scalable systems.
           </h2>
 
-          <p className="text-lg md:text-xl text-[#9CA3AF] leading-relaxed">
+          <p className="text-lg md:text-xl text-muted leading-relaxed">
             Open to backend engineering roles, scalable API development,
             authentication infrastructure, and production-focused full stack
             systems using Node.js, MongoDB, and modern web technologies.
@@ -30,58 +30,58 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10">
           {/* Left */}
-          <div className="bg-[#111827] border border-white/10 rounded-[32px] p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-white">
+          <div className="bg-surface border border-[var(--border)] rounded-[32px] p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-foreground">
               Contact Information
             </h3>
 
             <div className="space-y-6 text-[#9CA3AF]">
               <div>
-                <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
+                <p className="text-sm uppercase tracking-wider text-muted-dim mb-2">
                   Email
                 </p>
 
-                <p className="text-white">
+                <p className="text-foreground">
                   sayyedaaman9@gmail.com
                 </p>
               </div>
 
               <div>
-                <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
+                <p className="text-sm uppercase tracking-wider text-muted-dim mb-2">
                   Phone
                 </p>
 
-                <p className="text-white">
+                <p className="text-foreground">
                   +91 70206 11797
                 </p>
               </div>
 
               <div>
-                <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
+                <p className="text-sm uppercase tracking-wider text-muted-dim mb-2">
                   Location
                 </p>
 
-                <p className="text-white">
+                <p className="text-foreground">
                   Pune, Maharashtra, India
                 </p>
               </div>
 
               <div>
-                <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
+                <p className="text-sm uppercase tracking-wider text-muted-dim mb-2">
                   Current Focus
                 </p>
 
-                <p className="text-white">
+                <p className="text-foreground">
                   Backend Architecture &amp; Scalable APIs
                 </p>
               </div>
 
               <div>
-                <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
+                <p className="text-sm uppercase tracking-wider text-muted-dim mb-2">
                   Preferred Work
                 </p>
 
-                <p className="text-white">
+                <p className="text-foreground">
                   Backend Engineering • Full Stack Systems
                 </p>
               </div>

@@ -68,11 +68,11 @@ export default function StackSection() {
         <SectionTitle title="STACK" />
 
         <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
             Technologies used to build scalable backend systems.
           </h2>
 
-          <p className="text-lg text-[#9CA3AF] leading-relaxed">
+          <p className="text-lg text-muted leading-relaxed">
             Focused on backend architecture, authentication systems,
             scalable APIs, database design, and production-focused
             engineering workflows using modern JavaScript technologies.
@@ -85,12 +85,12 @@ export default function StackSection() {
               key={group.title}
               className="
                 rounded-[32px]
-                border border-white/10
-                bg-[#111827]
+                border border-[var(--border)]
+                bg-surface
                 p-8
               "
             >
-              <h3 className="text-2xl font-semibold text-white mb-8">
+              <h3 className="text-2xl font-semibold text-foreground mb-8">
                 {group.title}
               </h3>
 
@@ -100,11 +100,11 @@ export default function StackSection() {
                     key={item}
                     className="
                       rounded-full
-                      border border-white/10
-                      bg-white/5
+                      border border-[var(--border)]
+                      bg-surface-secondary
                       px-4 py-2
                       text-sm
-                      text-[#9CA3AF]
+                      text-muted
                     "
                   >
                     {item}

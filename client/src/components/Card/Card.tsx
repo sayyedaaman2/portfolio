@@ -17,16 +17,16 @@ export default function Card({
         group
         flex flex-col
         rounded-[32px]
-        border border-white/10
-        bg-[#111827]
+        border border-[var(--border)]
+        bg-surface
         overflow-hidden
         transition-all duration-300
-        hover:border-white/20
+        hover:border-[var(--border-subtle)]
         hover:-translate-y-1
       "
     >
       {/* Preview */}
-      <div className="relative aspect-video border-b border-white/5 bg-[#0B0F19]">
+      <div className="relative aspect-video border-b border-[var(--border-subtle)] bg-background">
         <Image
           src={imageUrl || "/project/default.avif"}
           alt={title}
@@ -38,12 +38,12 @@ export default function Card({
       {/* Content */}
       <div className="flex flex-col flex-1 p-8">
         {/* Title */}
-        <h3 className="text-2xl font-semibold text-white mb-4">
+        <h3 className="text-2xl font-semibold text-foreground mb-4">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-[#9CA3AF] leading-relaxed mb-6">
+        <p className="text-muted leading-relaxed mb-6">
           {description}
         </p>
 
@@ -58,11 +58,11 @@ export default function Card({
               key={tag}
               className="
                 rounded-full
-                border border-[#3B82F6]/20
-                bg-[#3B82F6]/10
+                border border-[var(--border)]
+                bg-surface-secondary
                 px-4 py-2
                 text-sm
-                text-[#BFDBFE]
+                text-muted
               "
             >
               {tag}
@@ -78,11 +78,11 @@ export default function Card({
                 key={tech}
                 className="
                   rounded-full
-                  border border-white/10
-                  bg-white/5
+                  border border-[var(--border)]
+                  bg-surface-secondary
                   px-4 py-2
                   text-sm
-                  text-[#9CA3AF]
+                  text-muted
                 "
               >
                 {tech}
@@ -120,11 +120,11 @@ export default function Card({
               className="
                 inline-flex items-center
                 rounded-2xl
-                border border-white/10
-                bg-white/5
-                hover:bg-white/10
+                border border-[var(--border)]
+                bg-surface-secondary
+                hover:bg-surface
                 px-5 py-3
-                text-sm font-medium text-white
+                text-sm font-medium text-foreground
                 transition-colors
               "
             >

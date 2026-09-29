@@ -116,7 +116,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-[#0B0F19] text-white antialiased flex flex-col">
+      <body className="min-h-screen bg-background text-foreground antialiased flex flex-col">
 
         <ThemeProvider
           attribute="class"

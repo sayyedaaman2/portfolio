@@ -8,7 +8,7 @@ import ContactSection from "@/components/Section/Contact/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-[#0B0F19] text-white overflow-hidden">
+    <main className="bg-background text-foreground overflow-hidden">
       <HeroSection />
 
       <StackSection />

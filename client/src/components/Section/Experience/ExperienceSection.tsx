@@ -65,18 +65,18 @@ export default function ExperienceSection() {
         <SectionTitle title="EXPERIENCE" />
 
         <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-foreground mb-6">
             Production backend engineering experience.
           </h2>
 
-          <p className="text-lg text-[#9CA3AF] leading-relaxed">
+          <p className="text-lg text-muted leading-relaxed">
             Experience designing scalable REST APIs, authentication systems,
             optimized database architectures, caching layers, and production-ready
             backend infrastructure using Node.js, MongoDB, Docker, Redis, and CI/CD workflows.
           </p>
         </div>
 
-        <div className="relative border-l border-white/10 pl-8 space-y-10">
+        <div className="relative border-l border-[var(--border)] pl-8 space-y-10">
           {experiences.map((experience) => (
             <article
               key={experience.company}
@@ -87,22 +87,22 @@ export default function ExperienceSection() {
               <div
                 className="
                   rounded-[32px]
-                  border border-white/10
-                  bg-[#111827]
+                  border border-[var(--border)]
+                  bg-surface
                   p-8
                 "
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
                   <div>
-                    <h3 className="text-2xl font-semibold text-white">
+                    <h3 className="text-2xl font-semibold text-foreground">
                       {experience.role}
                     </h3>
 
-                    <p className="text-[#9CA3AF] mt-2">
+                    <p className="text-muted mt-2">
                       {experience.company}
                     </p>
 
-                    <p className="text-sm text-[#6B7280] mt-1">
+                    <p className="text-sm text-muted-dim mt-1">
                       {experience.location}
                     </p>
                   </div>
@@ -111,10 +111,10 @@ export default function ExperienceSection() {
                     className="
                       w-fit
                       rounded-full
-                      border border-white/10
-                      bg-white/5
+                      border border-[var(--border)]
+                      bg-surface-secondary
                       px-4 py-2
-                      text-sm text-[#9CA3AF]
+                      text-sm text-muted
                     "
                   >
                     {experience.duration}
@@ -125,7 +125,7 @@ export default function ExperienceSection() {
                   {experience.points.map((point) => (
                     <li
                       key={point}
-                      className="flex gap-3 text-[#9CA3AF] leading-relaxed"
+                      className="flex gap-3 text-muted leading-relaxed"
                     >
                       <span className="text-[#06B6D4] mt-1">
                         •

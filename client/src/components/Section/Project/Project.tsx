@@ -11,11 +11,11 @@ export default function ProjectSection() {
         <SectionTitle title="PROJECTS" />
 
         <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-foreground mb-6">
             Backend systems built with production-focused architecture.
           </h2>
 
-          <p className="text-lg text-[#9CA3AF] leading-relaxed">
+          <p className="text-lg text-muted leading-relaxed">
             A collection of backend-focused projects showcasing scalable APIs,
             authentication systems, modular architecture, request lifecycle
             management, and production-ready engineering practices using

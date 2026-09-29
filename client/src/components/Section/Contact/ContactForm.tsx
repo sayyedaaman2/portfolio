@@ -115,7 +115,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="name"
-          className="block text-sm font-medium text-[#9CA3AF] mb-2"
+          className="block text-sm font-medium text-muted mb-2"
         >
           Name
         </label>
@@ -130,11 +130,11 @@ export default function ContactForm() {
           className="
             w-full
             rounded-2xl
-            border border-white/10
-            bg-[#0B0F19]
+            border border-[var(--border)]
+            bg-background
             px-5 py-4
-            text-white
-            placeholder:text-[#6B7280]
+            text-foreground
+            placeholder:text-muted-dim
             focus:outline-none
             focus:border-[#3B82F6]
             transition-colors
@@ -152,7 +152,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="email"
-          className="block text-sm font-medium text-[#9CA3AF] mb-2"
+          className="block text-sm font-medium text-muted mb-2"
         >
           Email
         </label>
@@ -167,11 +167,11 @@ export default function ContactForm() {
           className="
             w-full
             rounded-2xl
-            border border-white/10
-            bg-[#0B0F19]
+            border border-[var(--border)]
+            bg-background
             px-5 py-4
-            text-white
-            placeholder:text-[#6B7280]
+            text-foreground
+            placeholder:text-muted-dim
             focus:outline-none
             focus:border-[#3B82F6]
             transition-colors
@@ -189,7 +189,7 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="message"
-          className="block text-sm font-medium text-[#9CA3AF] mb-2"
+          className="block text-sm font-medium text-muted mb-2"
         >
           Message
         </label>
@@ -204,11 +204,11 @@ export default function ContactForm() {
           className="
             w-full
             rounded-2xl
-            border border-white/10
-            bg-[#0B0F19]
+            border border-[var(--border)]
+            bg-background
             px-5 py-4
-            text-white
-            placeholder:text-[#6B7280]
+            text-foreground
+            placeholder:text-muted-dim
             focus:outline-none
             focus:border-[#3B82F6]
             transition-colors

@@ -15,7 +15,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mt-16">
           {/* Image */}
           <div className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] border border-white/10 bg-[#111827]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] border border-[var(--border)] bg-surface">
               <Image
                 src="/myimage.png"
                 alt="Aaman Sayyed"
@@ -28,16 +28,16 @@ export default function AboutSection() {
 
           {/* Content */}
           <div>
-            <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-4 py-2 mb-8 text-sm text-[#9CA3AF]">
+            <div className="inline-flex items-center gap-2 border border-[var(--border)] bg-surface rounded-full px-4 py-2 mb-8 text-sm text-muted">
               <div className="w-2 h-2 rounded-full bg-[#10B981]" />
               Backend-focused engineer
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8 text-foreground">
               Designing scalable backend systems with production-focused thinking.
             </h2>
 
-            <div className="space-y-6 text-[#9CA3AF] text-lg leading-relaxed">
+            <div className="space-y-6 text-muted text-lg leading-relaxed">
               <p>
                 Backend Developer with 1.6+ years of experience building and
                 maintaining RESTful APIs using Node.js, Express.js, and TypeScript.

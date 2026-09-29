@@ -28,18 +28,18 @@ export default function Footer({
 }: FooterProps) {
   return (
     <footer
-      className={`border-t border-white/10 bg-[#0B0F19] ${className}`}
+      className={`border-t border-[var(--border)] bg-background ${className}`}
       {...rest}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 items-start lg:items-center justify-between">
           {/* Left */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-2">
+            <h3 className="text-xl font-semibold text-foreground mb-2">
               Aaman Sayyed
             </h3>
 
-            <p className="text-[#9CA3AF] max-w-md leading-relaxed">
+            <p className="text-muted max-w-md leading-relaxed">
               Backend-focused full stack developer building scalable APIs,
               authentication systems, and production-ready Node.js services.
             </p>
@@ -52,7 +52,7 @@ export default function Footer({
                 <li key={item.title}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
+                    className="text-sm text-muted hover:text-foreground transition-colors"
                   >
                     {item.title}
                   </Link>
@@ -66,34 +66,34 @@ export default function Footer({
             <Link
               href="https://github.com/sayyedaaman2"
               target="_blank"
-              className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
+              className="text-sm text-muted hover:text-foreground transition-colors"
             >
               GitHub
             </Link>
 
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sayyed-aaman"
               target="_blank"
-              className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
+              className="text-sm text-muted hover:text-foreground transition-colors"
             >
               LinkedIn
             </Link>
 
             <Link
-              href="mailto:your@email.com"
-              className="text-sm text-[#9CA3AF] hover:text-white transition-colors"
+              href="mailto:sayyedaaman9@gmail.com"
+              className="text-sm text-muted hover:text-foreground transition-colors"
             >
               Email
             </Link>
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/5 flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
-          <p className="text-sm text-[#6B7280]">
+        <div className="mt-10 pt-6 border-t border-[var(--border-subtle)] flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+          <p className="text-sm text-muted-dim">
             © {new Date().getFullYear()} Aaman Sayyed. All rights reserved.
           </p>
 
-          <p className="text-sm text-[#6B7280]">
+          <p className="text-sm text-muted-dim">
             Designed for backend engineering credibility.
           </p>
         </div>

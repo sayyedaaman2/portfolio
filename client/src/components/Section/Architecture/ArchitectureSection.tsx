@@ -68,11 +68,11 @@ export default function ArchitectureSection() {
         <SectionTitle title="ARCHITECTURE" />
 
         <div className="max-w-3xl mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-foreground mb-6">
             Backend architecture designed with scalability in mind.
           </h2>
 
-          <p className="text-lg text-[#9CA3AF] leading-relaxed">
+          <p className="text-lg text-muted leading-relaxed">
             Production-focused backend systems built using modular architecture,
             secure authentication flows, optimized request handling, and
             scalable database design patterns.
@@ -85,18 +85,18 @@ export default function ArchitectureSection() {
               key={card.title}
               className="
                 rounded-[32px]
-                border border-white/10
-                bg-[#111827]
+                border border-[var(--border)]
+                bg-surface
                 p-8
-                hover:border-white/20
+                hover:border-[var(--border-subtle)]
                 transition-all duration-300
               "
             >
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-2xl font-semibold text-foreground mb-4">
                 {card.title}
               </h3>
 
-              <p className="text-[#9CA3AF] leading-relaxed mb-8">
+              <p className="text-muted leading-relaxed mb-8">
                 {card.description}
               </p>
 
@@ -110,9 +110,9 @@ export default function ArchitectureSection() {
                       className="
                         px-4 py-3
                         rounded-2xl
-                        border border-white/10
-                        bg-[#0B0F19]
-                        text-sm text-[#F9FAFB]
+                        border border-[var(--border)]
+                        bg-background
+                        text-sm text-foreground
                       "
                     >
                       {step}
