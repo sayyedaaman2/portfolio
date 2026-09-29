@@ -2,14 +2,25 @@ import SectionTitle from "@/components/common/SectionTitle";
 
 const stackGroups = [
   {
+    title: "Languages",
+    items: [
+      "JavaScript (ES6+)",
+      "TypeScript",
+    ],
+  },
+  {
     title: "Backend Systems",
     items: [
       "Node.js",
       "Express.js",
-      "REST APIs",
-      "JWT Authentication",
-      "OAuth",
-      "WebSockets",
+      "REST API Design",
+      "MVC Architecture",
+      "Microservices",
+      "JWT",
+      "OAuth 2.0",
+      "RBAC",
+      "Passport.js",
+      "Rate Limiting",
     ],
   },
   {
@@ -18,25 +29,31 @@ const stackGroups = [
       "MongoDB",
       "Mongoose",
       "MySQL",
-      "MariaDB",
+      "Schema Design",
+      "Indexing",
+      "Query Optimization",
     ],
   },
   {
-    title: "Frontend",
+    title: "Cloud & DevOps",
     items: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    title: "Infrastructure & Tooling",
-    items: [
+      "AWS",
       "Docker",
-      "Git",
+      "CI/CD",
+      "Redis",
+      "PM2",
+      "Nginx",
+      "Linux",
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      "Swagger/OpenAPI",
       "Postman",
-      "NPM",
+      "Jest",
+      "Git",
+      "GitHub",
     ],
   },
 ];
@@ -62,7 +79,7 @@ export default function StackSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stackGroups.map((group) => (
             <div
               key={group.title}

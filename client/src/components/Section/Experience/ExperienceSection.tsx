@@ -2,56 +2,55 @@ import SectionTitle from "@/components/common/SectionTitle";
 
 const experiences = [
   {
-    role: "Back-end Developer",
+    role: "Backend Developer",
     company: "Awwaltech",
-    duration: "Oct 2023 — Present",
+    location: "Noida, India",
+    duration: "Oct 2025 — Present",
 
     points: [
-      "Architected and maintained 10+ RESTful APIs using Node.js and Express.js with response times consistently under 200ms.",
+      "Developed and maintained 10+ RESTful APIs using Node.js and Express.js, supporting core platform features with response times under 200ms.",
 
-      "Designed MongoDB schemas with compound indexing strategies, reducing average query execution time by 35%.",
+      "Optimized MongoDB schemas with compound indexes, reducing average query execution time by 35%.",
 
-      "Implemented JWT authentication, OAuth 2.0, RBAC authorization, and request validation across production APIs.",
+      "Implemented JWT, OAuth 2.0, and RBAC with input validation across all backend endpoints.",
 
-      "Integrated Redis caching, rate limiting, and middleware validation, reducing invalid API requests by 40% and improving throughput.",
+      "Integrated Redis caching and rate limiting middleware, reducing invalid API calls by 40%.",
 
-      "Built Swagger/OpenAPI documentation for backend endpoints, improving API discoverability and onboarding.",
+      "Documented all endpoints with Swagger/OpenAPI and collaborated with a 5-member engineering team on production backend modules.",
 
-      "Containerized backend services with Docker and deployed scalable production infrastructure using CI/CD workflows.",
-
-      "Collaborated with engineering teams to deliver scalable backend modules across production environments.",
+      "Containerized services with Docker and deployed via CI/CD pipelines to AWS.",
     ],
   },
 
   {
-    role: "Back-end Developer (Node.js)",
+    role: "Backend Developer",
     company: "Support Lets Talk",
+    location: "Delhi, India (Remote)",
     duration: "Apr 2023 — Sept 2023",
 
     points: [
-      "Migrated a legacy Laravel backend architecture to Node.js and Express.js, reducing codebase complexity by 30%.",
+      "Migrated a legacy Laravel backend to Node.js and Express.js, reducing codebase complexity by 30%.",
 
-      "Built 8+ RESTful APIs using modular MVC architecture with centralized validation and error handling.",
+      "Built 8+ RESTful APIs with centralized error handling, request validation, and MVC architecture.",
 
-      "Optimized MongoDB query performance with compound indexing, reducing API response latency by 40% for high-traffic endpoints.",
+      "Optimized MongoDB queries using compound indexing, reducing average response time by 40% for high-traffic endpoints.",
 
-      "Secured authentication flows using Passport.js and OAuth 2.0 across protected backend services.",
+      "Implemented Passport.js and OAuth 2.0 authentication across all API routes.",
     ],
   },
 
   {
-    role: "Back-end Developer Intern (Node.js)",
+    role: "Backend Developer Intern",
     company: "ResumerPro",
+    location: "Noida, India (Remote)",
     duration: "Jan 2023 — Mar 2023",
 
     points: [
-      "Led backend development of a Stack Overflow-inspired Q&A platform serving 500+ users using Node.js and MongoDB.",
+      "Developed backend services for a Q&A platform serving 500+ users using Node.js and MongoDB.",
 
-      "Architected scalable REST APIs following MVC principles for independent frontend/backend deployment.",
+      "Built REST APIs following MVC architecture with JWT authentication and role-based access control.",
 
-      "Implemented JWT authentication and role-based access control for multi-tier user management.",
-
-      "Collaborated with React.js and Next.js frontend teams to deliver production-ready features within sprint timelines.",
+      "Collaborated with a frontend team to deliver end-to-end features within sprint deadlines.",
     ],
   },
 ];
@@ -101,6 +100,10 @@ export default function ExperienceSection() {
 
                     <p className="text-[#9CA3AF] mt-2">
                       {experience.company}
+                    </p>
+
+                    <p className="text-sm text-[#6B7280] mt-1">
+                      {experience.location}
                     </p>
                   </div>
 

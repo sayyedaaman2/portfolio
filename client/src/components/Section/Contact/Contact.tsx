@@ -48,11 +48,31 @@ export default function Contact() {
 
               <div>
                 <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
+                  Phone
+                </p>
+
+                <p className="text-white">
+                  +91 70206 11797
+                </p>
+              </div>
+
+              <div>
+                <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
+                  Location
+                </p>
+
+                <p className="text-white">
+                  Pune, Maharashtra, India
+                </p>
+              </div>
+
+              <div>
+                <p className="text-sm uppercase tracking-wider text-[#6B7280] mb-2">
                   Current Focus
                 </p>
 
                 <p className="text-white">
-                  Backend Architecture & Scalable APIs
+                  Backend Architecture &amp; Scalable APIs
                 </p>
               </div>
 

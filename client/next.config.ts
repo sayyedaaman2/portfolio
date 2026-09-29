@@ -21,6 +21,9 @@ const withPWA = nextPwa as (config: PWAPluginConfig) => (nextConfig: NextConfig)
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  outputFileTracingIncludes: {
+    "/api/contact": ["./src/app/api/contact/**/*"],
+  },
 };
 
 // Compose the final config with proper typing
