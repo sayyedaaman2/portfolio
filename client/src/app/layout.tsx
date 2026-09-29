@@ -1,21 +1,14 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import InstallPWA from "@/components/InstallPWA";
-import ThemeScript from "@/script/ThemeScript";
 import { ThemeProvider } from "@/context/theme-provider";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-poppins",
-  weight: ["400", "500", "600", "700"],
-});
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sayyedaaman.vercel.app"),
@@ -32,13 +25,23 @@ export const metadata: Metadata = {
     "Aaman Sayyed",
     "Backend Engineer",
     "Node.js Developer",
+    "TypeScript",
     "Next.js",
     "MongoDB",
     "Express.js",
     "JWT Authentication",
+    "OAuth 2.0",
+    "RBAC",
     "REST API",
     "Docker",
+    "Redis",
+    "AWS",
+    "PM2",
+    "Nginx",
+    "Swagger OpenAPI",
     "Full Stack Developer",
+    "Backend Developer India",
+    "Pune Developer",
   ],
 
   authors: [
@@ -112,13 +115,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${poppins.variable} scroll-smooth`}
-    >
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-[#0B0F19] text-white antialiased flex flex-col">
-        <ThemeScript />
 
         <ThemeProvider
           attribute="class"

@@ -1,5 +1,26 @@
 [
     {
+        "title": "SixInd — Production API Platform",
+        "description": "Production backend API platform built with Node.js, Express.js, TypeScript, and MongoDB for a private client. Handles 5,000+ monthly requests with response times under 150ms. Features JWT authentication, RBAC middleware, Redis caching, and full Swagger/OpenAPI documentation. Deployed on AWS using PM2 and Nginx.",
+        "imageUrl": "",
+        "githubUrl": "",
+        "projectUrl": "",
+        "category": "backend",
+        "techStack": [
+            "Node.js",
+            "Express.js",
+            "TypeScript",
+            "MongoDB",
+            "Redis",
+            "JWT",
+            "RBAC",
+            "AWS",
+            "PM2",
+            "Nginx",
+            "Swagger/OpenAPI"
+        ]
+    },
+    {
         "title": "Task Tracker App",
         "description": "A full-stack task management application with a Node.js + Express backend and a React (Vite) frontend, following MVC and MVVM architecture patterns. Supports task CRUD operations with MongoDB integration and Dockerized deployment.",
         "imageUrl": "/project/task-tracker.png",

@@ -20,19 +20,21 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-[#9CA3AF] leading-relaxed mb-10 max-w-2xl">
-              I design modular APIs, authentication systems, secure request
-              flows, and production-ready backend services using Node.js,
-              Express.js, MongoDB, Docker, and TypeScript.
+              Backend Developer with 1.6+ years of experience building RESTful APIs,
+              authentication systems, and production-ready backends using Node.js,
+              Express.js, MongoDB, Redis, Docker, TypeScript, and AWS.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-10">
               {[
                 "REST APIs",
-                "JWT Authentication",
+                "JWT / OAuth 2.0",
                 "MongoDB",
+                "Redis",
                 "Docker",
+                "AWS",
                 "Node.js",
-                "System Design",
+                "TypeScript",
               ].map((tag) => (
                 <span
                   key={tag}
@@ -70,27 +72,27 @@ export default function HeroSection() {
                   </p>
 
                   <p className="text-[#9CA3AF]">
-                    JWT authentication successful
+                    JWT + OAuth 2.0 — authenticated in 42ms
                   </p>
                 </div>
 
                 <div className="bg-[#0B0F19] border border-white/5 rounded-2xl p-4">
                   <p className="text-[#10B981] mb-2">
-                    MongoDB Query Indexed
+                    MongoDB Compound Index
                   </p>
 
                   <p className="text-[#9CA3AF]">
-                    Response time reduced to 42ms
+                    Query time reduced by 35–45%
                   </p>
                 </div>
 
                 <div className="bg-[#0B0F19] border border-white/5 rounded-2xl p-4">
                   <p className="text-[#3B82F6] mb-2">
-                    Docker Container Running
+                    Redis Cache + Rate Limiter
                   </p>
 
                   <p className="text-[#9CA3AF]">
-                    API services healthy
+                    Invalid API calls reduced by 40%
                   </p>
                 </div>
               </div>

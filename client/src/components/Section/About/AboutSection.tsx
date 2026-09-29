@@ -17,7 +17,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] border border-white/10 bg-[#111827]">
               <Image
-                src="/myimage.jpg"
+                src="/myimage.png"
                 alt="Aaman Sayyed"
                 fill
                 priority
@@ -39,22 +39,20 @@ export default function AboutSection() {
 
             <div className="space-y-6 text-[#9CA3AF] text-lg leading-relaxed">
               <p>
-                I specialize in backend-focused full stack development using
-                Node.js, Express.js, MongoDB, and Next.js to build modular APIs,
-                authentication systems, and scalable web applications.
+                Backend Developer with 1.6+ years of experience building and
+                maintaining RESTful APIs using Node.js, Express.js, and TypeScript.
               </p>
 
               <p>
-                My development approach prioritizes clean architecture,
-                maintainability, secure request handling, reusable services, and
-                production-ready engineering practices over trend-driven UI
-                complexity.
+                Skilled in MongoDB schema design, query optimization, JWT/OAuth 2.0
+                authentication, RBAC, Redis caching, Docker, and AWS deployment.
+                I prioritize clean architecture, maintainability, and production-ready
+                engineering practices.
               </p>
 
               <p>
-                Currently focused on improving backend scalability, API
-                architecture, Docker workflows, authentication systems, and
-                performance optimization for modern web applications.
+                Currently focused on backend scalability, API security, Swagger/OpenAPI
+                documentation, and cloud deployment workflows using AWS, PM2, and Nginx.
               </p>
             </div>
 
